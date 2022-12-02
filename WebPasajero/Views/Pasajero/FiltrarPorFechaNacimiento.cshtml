@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebPasajero.Models.Pasajero>
+@{
+    ViewData["Title"] = "FiltrarPorFechaNacimiento";
+}
+
+<h1>FiltrarPorFechaNacimiento</h1>
+<table>
+    <thead>
+    <th>@Html.DisplayNameFor(model => model.Id)</th>
+    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+    <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+    <th>@Html.DisplayNameFor(model => model.FechaDeNacimiento)</th>
+    <th>@Html.DisplayNameFor(model => model.Ciudad)</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+                <td>@Html.DisplayFor(modelItem => item.Ciudad)</td>
+                <td>@Html.DisplayFor(modelItem => item.FechaDeNacimiento)</td>
+                <td>
+                    <a asp-action="Create" asp-asp-controller="Pasajero">Nuevo Pasjero</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
